@@ -1,6 +1,5 @@
 from django.db import models
 
-# Create your models here.
 class HomeIcon(models.Model):
     id = models.CharField(primary_key=True,max_length=32)
     c_index = models.IntegerField(max_length=3)
