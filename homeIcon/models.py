@@ -5,5 +5,6 @@ class HomeIcon(models.Model):
     c_index = models.IntegerField(max_length=3)
     status = models.CharField(max_length=1)
     icon = models.DateTimeField(max_length=256)
+
     class Meta:
         db_table = 'tb_home_icon'  # 自定义表名称
