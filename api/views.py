@@ -5,7 +5,7 @@ from rest_framework.parsers import JSONParser
 from rest_framework import status as httpStatus
 from myCommon.messageJson import MessageJson
 from srcoll import views as srcoll_view
-
+from homeIcon import views as home_icon_view
 # Create your views here.
 @csrf_exempt
 def run_job(request):
@@ -14,6 +14,8 @@ def run_job(request):
         return test((request))
     if (method == 'findSrcoll'):
         return srcoll_view.findSrcollApi(request)
+    if (method == 'findHomeIcon'):
+        return home_icon_view.findHomeIconApi(request)
     return urlNotFound(request,method)
 
 def test(request):

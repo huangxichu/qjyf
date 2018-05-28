@@ -16,12 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,re_path
 from srcoll import views as srcoll_view
+from homeIcon import views as home_icon_view
 from api import views as api_view
 from django.views.static import serve
 from qjyf import settings        #upload是站点名
 
 urlpatterns = [
     path('srcoll/add', srcoll_view.add,name="srcollAdd"),
+    path('homeIcon/add', home_icon_view.add,name="homeIconAdd"),
     re_path('media/(?P<path>.*)',serve,{'document_root': settings.MEDIA_ROOT}),
     path('api/run_job',api_view.run_job),
     path('admin/', admin.site.urls),

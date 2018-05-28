@@ -11,8 +11,6 @@ import json
 def add(request):
     desc_remark = request.GET['desc_remark']
     a = Srcoll.objects.create(id=uuid.uuid1(),desc_remark=desc_remark,status=Status.ENABLE.value)
-    #给数据库增加数据 ,hostname 为数据库表中的字段名称 ，name 是你传人的参数
-    print(desc_remark)               #打印 参数具体值
     return HttpResponse('增加第{}数据成功'.format(a.id))  #通过占位符format，来显示具体修改来哪行ID
 
 
