@@ -18,6 +18,7 @@ from django.urls import path,re_path
 from srcoll import views as srcoll_view
 from homeIcon import views as home_icon_view
 from know import views as know_view
+from product import productBaseView as product_base_view
 from api import views as api_view
 from django.views.static import serve
 from qjyf import settings        #upload是站点名
@@ -27,6 +28,7 @@ urlpatterns = [
     path('homeIcon/add', home_icon_view.add,name="homeIconAdd"),
     path('know/add', know_view.addKnow,name="knowAdd"),
     path('know/detail/add', know_view.addKnowDetail,name="knowDetailAdd"),
+    path('product/base/add', product_base_view.addProductBase,name="productBaseAdd"),
     re_path('media/(?P<path>.*)',serve,{'document_root': settings.MEDIA_ROOT}),
     path('api/run_job',api_view.run_job),
     path('admin/', admin.site.urls),

@@ -7,6 +7,7 @@ from myCommon.messageJson import MessageJson
 from srcoll import views as srcoll_view
 from homeIcon import views as home_icon_view
 from know import views as know_view
+from product import productBaseView as product_base_view
 import time
 from myCommon.myMd5 import md5
 # Create your views here.
@@ -79,4 +80,6 @@ def run_job(request):
         return know_view.findKnowApi(request)
     if (method == 'findKnowDetail'):
         return know_view.findKnowDetailApi(request)
+    if (method == 'findProductBase'):
+        return product_base_view.findProductBase(request)
     return urlNotFound(request,method)
