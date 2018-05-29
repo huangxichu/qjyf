@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Srcoll(models.Model):
-    id = models.CharField(primary_key=True,max_length=32)
+    id = models.CharField(primary_key=True,max_length=36)
     desc_remark = models.CharField(max_length=4000)
     status = models.CharField(max_length=1)
     start_time = models.DateTimeField(auto_now_add=True)

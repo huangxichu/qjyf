@@ -1,7 +1,7 @@
 from django.db import models
 
 class HomeIcon(models.Model):
-    id = models.CharField(primary_key=True,max_length=32)
+    id = models.CharField(primary_key=True,max_length=36)
     c_index = models.IntegerField(max_length=3)
     status = models.CharField(max_length=1)
     icon = models.CharField(max_length=256)
