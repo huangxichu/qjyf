@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'srcoll',
     'homeIcon',
+    'know',
     'api',
 ]
 

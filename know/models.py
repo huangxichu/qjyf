@@ -3,6 +3,7 @@ from django.db import models
 class Know(models.Model):
     id = models.CharField(primary_key=True,max_length=36)
     title = models.CharField(max_length=256)
+    dsc_remark = models.CharField(max_length=2000)
     icon = models.CharField(max_length=256)
     status = models.CharField(max_length=1)
     create_time = models.DateTimeField(auto_now_add=True)

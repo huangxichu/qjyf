@@ -6,6 +6,7 @@ from rest_framework import status as httpStatus
 from myCommon.messageJson import MessageJson
 from srcoll import views as srcoll_view
 from homeIcon import views as home_icon_view
+from know import views as know_view
 # Create your views here.
 @csrf_exempt
 def run_job(request):
@@ -16,6 +17,10 @@ def run_job(request):
         return srcoll_view.findSrcollApi(request)
     if (method == 'findHomeIcon'):
         return home_icon_view.findHomeIconApi(request)
+    if (method == 'findKnow'):
+        return know_view.findKnowApi(request)
+    if (method == 'findKnowDetail'):
+        return know_view.findKnowDetailApi(request)
     return urlNotFound(request,method)
 
 def test(request):
